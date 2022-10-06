@@ -1,0 +1,90 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*Top bar*/
+.top-bar {
+    display: inline-flex;
+    
+}
+
+.timer {
+    margin-left: 70%;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.view-high-scores {
+    margin-top: 20px;
+    margin-left: 10%;
+    font-size: 16px;
+    height: 30px;
+    background-color: orange;
+    border-radius: 25px;
+}
+
+.view-high-scores:hover {
+    background-color: darkorange;
+    cursor: pointer;
+}
+
+/*Title page */
+h1 {
+    font-size: 300%;
+}
+
+p {
+    font-size: 120%;
+}
+
+.start-btn {
+    margin-top: 25px;
+    font-size: 36px;
+    background-color: red;
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.start-btn:hover {
+    background-color: darkred;
+    cursor: pointer;
+}
+
+/*Questions*/
+h2 {
+    font-size: 180%;
+}
+
+.answer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    font-size: 20px;
+    border: solid orange 3px;
+    border-radius: 25px;
+    width: 35%;
+    padding: 5px;
+    margin-top: 8px;
+    background-color: orange;
+}
+
+.answer:hover {
+    background-color: darkorange;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
+
