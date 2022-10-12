@@ -10,14 +10,15 @@
   <body>
     <!--Top bar-->
     <div class="top-bar">
-        <button class="view-high-scores">View High Scores</button>
-        <p class="timer">Timer: 00:00</p>
+        <p class="view-high-scores" onclick="showHighScores()">View High Scores</p>
+        <p class="timer-label">Time: </p>
+        <p class="timer">75</p>
     </div>
 
     <!--Starting page-->
-    <div class="starting-page">
+    <div class="starting-page show">
         <h1>Code Quiz Challenge</h1>
-        <p>Answer the following multiple choice questions within the 75 second time limit.<br>
+        <p class="rules">Answer the following multiple choice questions within the 75 second time limit.<br>
             Every question you get wrong will deduct your time limit by 10 seconds!
         </p>
         <div>
@@ -25,65 +26,85 @@
         </div>
     </div>
 
+    
+    
     <!--Questions-->
     <div class="question1 hide">
         <h2>How do you find the length of an array in Javascript?</h2>
-        <button class="answer incorrect">1. ____.number</button>
-        <button class="answer incorrect">2. ____.width</buttonp>
-        <button class="answer correct">3. ____.length</button>
-        <button class="answer incorrect">4. ____.log</button>
+        <div class="answer1choices">
+            <button class="answers" onclick="showIncorrectText()">1. ____.number</button>
+            <button class="answers" onclick="showIncorrectText()">2. ____.width</button>
+            <button class="answers" onclick="showCorrectText()">3. ____.length</button>
+            <button class="answers" onclick="showIncorrectText()">4. ____.log</button>
+        </div>
     </div>
 
     <div class="question2 hide">
         <h2>How would you join two different arrays into one in JavaScript?</h2>
-        <button class="answer correct">1. ____.concat()</button>
-        <button class="answer incorrect">2. ____.combine</button>
-        <button class="answer incorrect">3. ____.together</button>
-        <button class="answer incorrect">4. ____.merge</button>
+        <div class="answer2choices">
+            <button class="answers" onclick="showCorrectText()">1. ____.concat()</button>
+            <button class="answers" onclick="showIncorrectText()">2. ____.combine</button>
+            <button class="answers" onclick="showIncorrectText()">3. ____.together</button>
+            <button class="answers" onclick="showIncorrectText()">4. ____.merge</button>
+        </div>
     </div>
 
     <div class="question3 hide">
         <h2>In JavaScript, to have multiple properties in one variable, you must contain them in:</h2>
-        <button class="answer incorrect">1. [ ]</button>
-        <button class="answer correct">2. { }</button>
-        <button class="answer incorrect">3. " "</button>
-        <button class="answer incorrect">4. ( )</button>
+        <div class="answer3choices">
+            <button class="answers" onclick="showIncorrectText()">1. [ ]</button>
+            <button class="answers" onclick="showCorrectText()">2. { }</button>
+            <button class="answers" onclick="showIncorrectText()">3. " "</button>
+            <button class="answers" onclick="showIncorrectText()">4. ( )</button>
+        </div>
     </div>
 
     <div class="question4 hide">
         <h2>How could you access specific HTML elements in JavaScript?</h2>
-        <button class="answer incorrect">1. document.getElementById()</button>
-        <button class="answer incorrect">2. document.getElementsByClassName()</button>
-        <button class="answer incorrect">3. document.querySelector()</button>
-        <button class="answer correct">4. All of the above</button>
+        <div class="answer4choices">
+            <button class="answers" onclick="showIncorrectText()">1. document.getElementById()</button>
+            <button class="answers" onclick="showIncorrectText()">2. document.getElementsByClassName()</button>
+            <button class="answers" onclick="showIncorrectText()">3. document.querySelector()</button>
+            <button class="answers" onclick="showCorrectText()">4. All of the above</button>
+        </div>
     </div>
     
     <div class="question5 hide">
         <h2>What does the ".unshift" do in the following: array.unshift("pizza");</h2>
-        <button class="answer incorrect">1. Removes "pizza" from the array</button>
-        <button class="answer correct">2. Adds "pizza" to the beginning of array</button>
-        <button class="answer incorrect">3. Adds "pizza" to the end of array</button>
-        <button class="answer incorrect">4. Turns "pizza" to capital letters</button>
+        <div class="answer5choices">
+            <button class="answers" onclick="showIncorrectText()">1. Removes "pizza" from the array</button>
+            <button class="answers" onclick="showCorrectText()">2. Adds "pizza" to the beginning of array</button>
+            <button class="answers" onclick="showIncorrectText()">3. Adds "pizza" to the end of array</button>
+            <button class="answers" onclick="showIncorrectText()">4. Turns "pizza" to capital letters</button>
+        </div>
     </div>
 
-    <!--Ending page-->
-    <div class="finished-screen hide">
+     <!--Ending page and submit initials-->
+     <div class="ending-page hide">
         <h1>All done!</h1>
-        <p>Your final score: 00</p>
-        <label>Enter initials:</label>
-        <input type="text">
-        <button>Submit</button>
+        <p class="score-label">Your final score: </p>
+        <p class="final-score">00</p>
+
+        <label id="enter-initials">Enter initials:</label>
+        <input id="text-box" type="text">
+        <input type="button" id="initials-btn" value="Submit">
     </div>
+
+    <!--Shows if answer was correct or incorrect-->
+    <hr class="hide">
+    <div class="correct-text hide">Correct!</div>
+    <div class="incorrect-text hide">Incorrect! 10 seconds deducted</div>
 
     <!--High Scores page-->
     <div class="high-scores hide">
         <h1>High Scores: </h1>
-        <ol>
-            <li>JK - 25</li>
-            <li>JK - 25</li>
-            <li>JK - 25</li>
-            <li>JK - 25</li>
+        <ol id="high-scores-list">
+            <li></li>
+            <li></li>
+            <li></li>
         </ol>
+            <button class="go-back-btn">Go back</button>
+            <button class="reset-high-scores-btn">Reset high scores</button>
     </div>
 
 
