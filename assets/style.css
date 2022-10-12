@@ -14,57 +14,65 @@ body {
 /*Top bar*/
 .top-bar {
     display: inline-flex;
-    
+}
+
+.timer-label {
+    margin-left: 72%;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 .timer {
-    margin-left: 70%;
-    font-size: 24px;
+    margin-left: .5%;
+    font-size: 30px;
     font-weight: bold;
 }
 
 .view-high-scores {
-    margin-top: 20px;
-    margin-left: 10%;
-    font-size: 16px;
-    height: 30px;
-    background-color: orange;
-    border-radius: 25px;
+    margin-top: 35px;
+    margin-left: 7%;
+    font-size: 20px;
+    height: 110%;
+    color: darkorange;
+    
 }
 
 .view-high-scores:hover {
-    background-color: darkorange;
+    font-weight: bold;
     cursor: pointer;
 }
 
 /*Title page */
 h1 {
-    font-size: 300%;
+    font-size: 400%;
 }
 
-p {
-    font-size: 120%;
+.rules {
+    margin-top: 90px;
+    font-size: 30px;
 }
 
 .start-btn {
     margin-top: 25px;
     font-size: 36px;
-    background-color: red;
+    background-color: orange;
     border-radius: 25px;
     padding: 10px;
 }
 
 .start-btn:hover {
-    background-color: darkred;
+    background-color: darkorange;
+    font-weight: bold;
     cursor: pointer;
 }
 
 /*Questions*/
 h2 {
     font-size: 180%;
+    margin-top: 10%;
 }
 
-.answer {
+.answers {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -78,13 +86,105 @@ h2 {
     background-color: orange;
 }
 
-.answer:hover {
+.answers:hover {
     background-color: darkorange;
     font-weight: bold;
     cursor: pointer;
+}
+
+p {
+    font-size: 120%;
+}
+
+hr {
+    margin-top: 2%;
+    width: 35%;
+    height: 2px;
+    color: grey;
+    background-color: grey;
+}
+
+.correct-text {
+    color: green;
+    font-size: 36px;
+}
+
+.incorrect-text {
+    color: red;
+    font-size: 36px;
 }
 
 .hide {
     display: none;
 }
 
+.show {
+    display: inline;
+}
+
+
+
+.score-label {
+    font-size: 300%;
+    margin-bottom: 5px;
+}
+
+.final-score {
+    margin-top: 1px;
+    font-size: 300%;
+}
+
+#enter-initials {
+    font-size: 160%;
+}
+
+#text-box {
+    background-color: orange;
+    height: 30px;
+    font-size: 20px;
+}
+
+#initials-btn {
+    margin-left: 5px;
+    background-color: orange;
+    border-radius: 25px;
+    height: 30px;
+    font-size: 20px;
+}
+
+#initials-btn:hover {
+    background-color: darkorange;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#high-scores-list {
+    padding-right: 40px;
+    font-size: 18px;
+    list-style-type: none;
+}
+
+.go-back-btn {
+    margin:auto;
+    background-color: orange;
+    border-radius: 25px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.reset-high-scores-btn {
+    display: block;
+    margin: auto;
+    margin-top: 3px;
+    background-color: orange;
+    border-radius: 25px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.go-back-btn:hover, 
+.reset-high-scores-btn:hover {
+    background-color: darkorange;
+    font-weight: bold;
+    cursor: pointer;
+}
